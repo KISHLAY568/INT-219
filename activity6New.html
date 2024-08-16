@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody id="appendedData"></tbody>
+    </table>
+    <input type="text" name="id" placeholder="ID" />
+    <input type="text" name="name" placeholder="Name" />
+    <input type="number" name="age" placeholder="Age" />
+    <button id="s">Submit</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#s").click(function () {
+          let id = $('input[name="id"]').val();
+          let name = $('input[name="name"]').val();
+          let age = $('input[name="age"]').val();
+          console.log(id, name, age);
+          $("#appendedData").append(
+            <tr>
+              <td>${id}</td>
+              <td>${name}</td>
+              <td>${age}</td>
+            </tr>
+          );
+        });
+
+        // Fetching JSON data and appending it to the table
+        $.getJSON("C:\Users\lucky\Desktop\int219\new01.json", function (data) {
+          $.each(data, function (index, element) {
+            $("#appendedData").append(
+              <tr>
+                <td>${element.id}</td>
+                <td>${element.name}</td>
+                <td>${element.age}</td>
+              </tr>
+            );
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

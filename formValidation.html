@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <script>
+        function validateForm(event) {
+            event.preventDefault(); // Prevent default form submission behavior
+
+            var nameField = document.getElementById("name");
+            var emailField = document.getElementById("email");
+            var passwordField = document.getElementById("password");
+
+            // Validate Name
+            var nameValue = nameField.value.trim();
+            var namePattern = /^[A-Za-z]+$/;
+            if (nameValue === "" || !namePattern.test(nameValue)) {
+                alert("Please enter a valid name with only letters.");
+                nameField.focus();
+                return false;
+            }
+
+            // Validate Email
+            var emailValue = emailField.value.trim();
+            var emailPattern = /@.*\./;
+            if (emailValue === "" || !emailPattern.test(emailValue)) {
+                alert("Please enter a valid email address.");
+                emailField.focus();
+                return false;
+            }
+
+            // Validate Password
+            var passwordValue = passwordField.value.trim();
+            if (passwordValue.length < 8) {
+                alert("Password must be at least 8 characters long.");
+                passwordField.focus();
+                return false;
+            }
+
+            // Display welcome message after a short delay
+            setTimeout(function () {
+                alert("Welcome! Thank you for submitting the form.");
+                document.getElementById("myForm").reset(); // Reset the form after submission
+            }, 1000);
+
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <form id="myForm" onsubmit="return validateForm(event)">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

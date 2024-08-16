@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery with Thumbnails</title>
+    <style>
+        #gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .thumbnail {
+            margin: 10px;
+            cursor: pointer;
+        }
+        .thumbnail img {
+            width: 100px;
+            height: 100px;
+        }
+        #main-image {
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="gallery-container">
+        <div class="thumbnail" onclick="showImage(1)">
+            <img src="1.jpg" alt="Image 1">
+        </div>
+        <div class="thumbnail" onclick="showImage(2)">
+            <img src="2 (1).png" alt="Image 2">
+        </div>
+        <div class="thumbnail" onclick="showImage(3)">
+            <img src="2 (2).jpg" alt="Image 3">
+        </div>
+        <!-- Add more thumbnails as needed -->
+    </div>
+
+    <img id="main-image" src="2 (3).jpg" alt="Main Image">
+
+    <script>
+        function showImage(imageNumber) {
+            var mainImage = document.getElementById("main-image");
+            switch(imageNumber) {
+                case 1:
+                    mainImage.src = "1.jpg"; // Replace with your image URL
+                    break;
+                case 2:
+                    mainImage.src = "2 (1).png"; // Replace with your image URL
+                    break;
+                case 3:
+                    mainImage.src = "2 (2).jpg"; // Replace with your image URL
+                    break;
+                // Add more cases for additional images
+            }
+        }
+    </script>
+</body>
+</html>

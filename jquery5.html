@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>FORM</h1>
+    <input
+      type="text"
+      id="input1"
+      class="clear"
+      placeholder="First Name"
+    /><br /><br />
+    <input
+      type="text"
+      id="input2"
+      class="clear"
+      placeholder="Last Name"
+    /><br /><br />
+    <input
+      type="text"
+      id="input3"
+      class="clear"
+      placeholder="Gender"
+    /><br /><br />
+    <input
+      type="text"
+      id="input4"
+      class="clear"
+      placeholder="Age"
+    /><br /><br />
+
+    <button id="setValue">Set Value</button>
+    <button id="clearValue">Clear Value</button>
+    <script>
+      $("#setValue").click(function () {
+        $("#input1").val("KISHLAY");
+        $("#input2").val("KUMAR");
+        $("#input3").val("M");
+        $("#input4").val("21");
+      });
+
+      $("#clearValue").click(function () {
+        $(".clear").val("");
+      });
+    </script>
+  </body>
+</html>

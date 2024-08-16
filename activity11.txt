@@ -1,0 +1,4 @@
+Installation of Typescript using npm
+Create a simple Typescript file in visual studio code
+write a basic TypeScript program such as a function that calculates the sum of two numbers
+compile the TypeScript code to javaScript using the TypeScript compiler(tsc)

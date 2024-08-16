@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>HTML Form</h2>
+
+    <form action="/submit_form">
+      <label for="fname">First name:</label><br />
+      <input type="text" id="fname" name="fname" /><br />
+      <label for="lname">Last name:</label><br />
+      <input type="text" id="lname" name="lname" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <p>Click "Submit" to send the form data to a page called "/submit_form".</p>
+
+    <script>
+      // Syntax Error: Missing closing parenthesis
+      document.getElementById("fname").addEventListener("click", function () {
+        alert("You clicked the First Name input field!");
+      });
+
+      // Reference Error: 'x' is not defined
+      console.log(x);
+
+      // Type Error: null has no properties
+      var nonExistentElement = document.getElementById("nonExistent");
+      nonExistentElement.innerHTML = "This is a non-existent element";
+
+      // Range Error: Invalid array length
+      var arr = new Array(-1);
+    </script>
+  </body>
+</html>

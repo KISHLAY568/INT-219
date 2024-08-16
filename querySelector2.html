@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .first {
+        height: 500px;
+        width: 500px;
+        border: 1px solid;
+        margin: auto;
+      }
+      .second {
+        height: 300px;
+        width: 300px;
+        border: 1px solid;
+        margin: auto;
+        margin-top: 100px;
+      }
+      .third {
+        height: 100px;
+        width: 100px;
+        border: 1px solid;
+        margin: auto;
+        margin-top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="first">
+      <div class="second">
+        <div class="third"></div>
+      </div>
+    </div>
+    <script>
+      document.querySelector(".first").style.background = "red";
+      document.querySelector(".second").style.background = "yellow";
+      document.querySelector(".third").style.background = "green";
+    </script>
+  </body>
+</html>

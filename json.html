@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Create object from JSON String</h2>
+    <p id="demo"></p>
+    <script>
+      let text = {
+        employees: [
+          { firstName: "jhon", lastName: "Doe" },
+          { firstName: "Anna", lastName: "smith" },
+          { firstName: "Peter", lastName: "jonas" },
+        ],
+      };
+
+      const obj = JSON.parse(text);
+      document.getElementById("demo").innerHTML =
+        obj.employees[0].firstName + " " + obj.employees[0].lastName;
+    </script>
+  </body>
+</html>

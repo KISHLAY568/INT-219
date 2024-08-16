@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <style>
+      body {
+        color: red;
+      }
+      form {
+        width: 80vw;
+        margin-top: 1rem;
+        margin-left: auto;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="myForm" onsubmit="Submit(event)">
+      <table bgcolor="seagreen" cellpadding="10">
+        <tr>
+          <td><label for="firstName">First Name</label></td>
+          <td><input type="text" id="firstName" placeholder="First Name" /></td>
+        </tr>
+        <tr>
+          <td><label for="email">Email</label></td>
+          <td>
+            <input type="text" id="email" placeholder="example@example.com" />
+          </td>
+        </tr>
+        <tr>
+          <td><label>Gender</label></td>
+          <td>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="male" checked />
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="female" />
+            <label for="other">Other</label>
+            <input type="radio" name="gender" id="other" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="citys">Select City</label></td>
+          <td>
+            <select name="city" id="citys">
+              <option value="noida">Noida</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="CapeTown">Cape Town</option>
+              <option value="jalandhar">Jalandhar</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="address">Address</label></td>
+          <td><textarea id="address" rows="4"></textarea></td>
+        </tr>
+        <tr>
+          <td><label for="file">File</label></td>
+          <td><input type="file" name="file" id="file" /></td>
+        </tr>
+        <tr>
+          <td><label for="password">Password</label></td>
+          <td>
+            <input type="password" id="password" placeholder="Password" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="confirmPassword">Confirm Password</label></td>
+          <td>
+            <input
+              type="password"
+              id="confirmPassword"
+              placeholder="Confirm Password"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <input type="checkbox" name="checkbox" />I agree to terms and
+            conditions
+          </td>
+        </tr>
+        <tr>
+          <td><input type="reset" value="Reset" /></td>
+          <td><input type="submit" value="Submit" /></td>
+        </tr>
+      </table>
+    </form>
+
+    <script>
+      function Submit(event) {
+        try {
+          event.preventDefault();
+          const name = document.querySelector("#firstName");
+          const email = document.querySelector("#email");
+          if (name.value.length <= 2) {
+            // alert('Name must be valid');
+            throw new Error("name is incorrect");
+            return;
+          }
+          if (!email.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+            // alert('Email must be valid!');
+            throw new Error("Email must be valid!");
+            return;
+          }
+          document.getElementById("myForm").submit();
+        } catch (err) {
+          console.log(err.message);
+          document.body.append(err.message + "      ");
+        }
+      }
+    </script>
+  </body>
+</html>

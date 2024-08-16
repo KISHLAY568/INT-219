@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="add()">//Execute a javascript immediately after a page has been loaded
+    <script>
+        var i = Number(prompt("Enter 1st Variable"));
+        var j = Number(prompt("Enter 2nd Variable"));
+        function add() {
+            document.write("the sum is ", (i + j));
+        }
+    </script>
+
+</body>
+
+</html>

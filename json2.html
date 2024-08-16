@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      const myJSON = { name: "jhon", age: "30", cgpa: 7.1, car: null };
+      const myOBJ = JSON.parse(myJSON);
+
+      let text = "";
+      for (const x in myOBJ) {
+        text += x + ", ";
+        document.getElementById("demo").innerHTML = text;
+      }
+    </script>
+  </body>
+</html>

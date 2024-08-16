@@ -1,0 +1,4 @@
+Create a JSON object that includes nested objects. Participants can represent a structure with properties like name,age,address,and nested details.
+Convert a JSON object created earlier to a string using the JSON.stringify() method.
+Assign a task to take the stringified JSON object from the previous step and convert it back to a Javascript object.
+Participants should log the resulting object to the console.

@@ -1,0 +1,173 @@
+<!-- set up a new html file and link it to the bootstarp css file using bootstarp cdn
+create a header section for the website. add the website title or logo to the left side
+implement a bootstarp dropdown menu items on right side containing at least two menu items
+design a main content section for website (include dummy content to simulate a real world scenario)
+note: visibility of navigation menu and responsive when scrolling  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Impressive Website</title>
+    <!-- Bootstrap CSS CDN -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Custom CSS for the webpage */
+      body {
+        background-color: #f0f0f0;
+        color: #333;
+        font-family: Arial, sans-serif;
+      }
+
+      .navbar {
+        background-color: #333;
+      }
+
+      .navbar-brand {
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .navbar-nav .nav-link {
+        color: #fff;
+      }
+
+      .jumbotron {
+        background-color: #007bff;
+        color: #fff;
+        padding: 100px 0;
+        text-align: center;
+        margin-bottom: 0;
+      }
+
+      .jumbotron h1 {
+        font-size: 48px;
+      }
+
+      .jumbotron p {
+        font-size: 20px;
+      }
+
+      .card {
+        background-color: #fff;
+        margin-bottom: 30px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .card-body {
+        padding: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/512px-Logo_of_Twitter.svg.png"
+          width="30px"
+        />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Services
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Web Development</a>
+                <a class="dropdown-item" href="#">Graphic Design</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Contact Us</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Welcome to Our Impressive Website</h1>
+        <p>We provide top-notch web development and graphic design services.</p>
+        <a href="#" class="btn btn-primary btn-lg">Get Started</a>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Web Development</h5>
+              <p class="card-text">
+                We offer custom web development solutions tailored to your
+                business needs.
+              </p>
+              <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Graphic Design</h5>
+              <p class="card-text">
+                Our expert designers create stunning visuals to elevate your
+                brand.
+              </p>
+              <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Contact Us</h5>
+              <p class="card-text">
+                Get in touch with us today to discuss your project requirements.
+              </p>
+              <a href="#" class="btn btn-primary">Contact</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
